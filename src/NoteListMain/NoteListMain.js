@@ -7,12 +7,13 @@ import './NoteListMain.css'
 import NoteContext from '../NoteContext';
 
 class NoteListMain extends React.Component {
- static contextType = NoteContext
+ static contextType = NoteContext;
+
  render() {
     return (
     <section className ='NoteListMain'>
       <ul>
-        {this.notes.map(note =>
+        {this.context.notes.map(note =>
           <li key={note.id}>
             <Note
               id={note.id}
