@@ -55,8 +55,8 @@ class App extends Component {
     }
 
     renderMainRoutes() {
-        const {notes, folders} = this.state
-        return (
+        const {notes} = this.state 
+       return (
             <>
                 {['/', '/folder/:folderId'].map(path => (
                     <Route
@@ -68,7 +68,7 @@ class App extends Component {
                             const notesForFolder = getNotesForFolder(
                                 notes,
                                 folderId
-                            );
+                            )
                             return (
                                 <NoteListMain
                                     {...routeProps}
